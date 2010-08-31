@@ -1,0 +1,15 @@
+h2. Just a Jekyll Template
+
+* name: Site Name
+* tagline: Your Site Tagline
+
+* use_js: Set to true to use JS & False to dissable JS
+
+# Google
+* google_verify: Key for Google web master tools
+* google_ana: Just enter the Google Analytics Key to activate the Google Analytics code for this page
+
+h3. Wufoo Forms
+* use_wufoo: Set to false to disable
+* user_name: User name
+* form_hash: form Hash
