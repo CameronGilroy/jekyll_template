@@ -1,0 +1,18 @@
+---
+layout: default
+title: Contact
+---
+
+p. Jekyll Template - Contact Page
+
+{% if site.use_wufoo %}
+<script type="text/javascript">var host = (("https:" == document.location.protocol) ? "https://secure." : "http://");document.write(unescape("%3Cscript src='" + host + "wufoo.com/scripts/embed/form.js' type='text/javascript'%3E%3C/script%3E"));</script><script type="text/javascript">
+var {{site.form_hash}} = new WufooForm();
+{{site.form_hash}}.initialize({
+'userName':'{{site.user_name}}', 
+'formHash':'{{site.form_hash}}', 
+'autoResize':true,
+'height':'571'});
+{{site.form_hash}}.display();
+</script>
+{% endif %}

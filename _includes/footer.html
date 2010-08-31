@@ -1,0 +1,28 @@
+</article>
+<footer class="wrapper">
+	<p>&copy; 2009 - 2010 {{site.name}}</p>
+</footer>
+<!--[if IE ]>
+<div class="ie-message"><p>You are using Internet Explorer. If you'd like to view this site in its full glory please use a browser like <a href="http://www.google.com/chrome/">Chrome</a> or <a href="http://www.apple.com/safari/">Safari</a> or <a href="http://www.mozilla.com/firefox">Firefox</a>.</p></div>
+<[endif]-->
+{% if site.use_js %}
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.min.js"></script>
+<script>!window.jQuery && document.write('<script src="/js/jquery-1.4.2.min.js"><\/script>')</script>
+<script src="/js/jquery.timeago.js"></script>
+<script src="/js/functions.js"></script>
+{% endif %}
+{% if site.google_ana %}
+	<script>
+	 var _gaq = [['_setAccount', '{{ site.google_ana }}'], ['_trackPageview']];
+	 (function(d, t) {
+	  var g = d.createElement(t),
+	      s = d.getElementsByTagName(t)[0];
+	  g.async = true;
+	  g.src = '//www.google-analytics.com/ga.js';
+	  s.parentNode.insertBefore(g, s);
+	 })(document, 'script');
+	</script>
+{% endif %}
+<!--{{site.time}}-->
+</body>
+</html>

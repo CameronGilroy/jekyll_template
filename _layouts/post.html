@@ -1,0 +1,46 @@
+---
+layout: default
+---
+	<article>
+		<nav>
+			<ul id="tabs">
+				<li><a href="#documentation" id="documentation-tab">Documentation</a></li>
+				<li><a href="#issues" id="issues-tab">Issues</a></li>	
+				{% if page.pledgie %}<li><a href="#donations" id="donations-tab">Donations</a></li>{% endif %}
+			</ul>
+		</nav>
+		<section id="documentation">
+			{% if page.github_gist %}
+			<aside>
+				<h4>Downloads</h4>
+				<p><a href="{{ page.github_gist }}download">Download the latest version</a></p>
+			</aside>			
+			{% endif %}							
+			{% if page.github_tags %}
+			<aside>
+				<h4>Downloads</h4>
+				<p><a href="http://github.com/camgill/{{ page.github }}/zipball/{{ page.github_tags.first }}">Download the latest version ({{ page.github_tags.first }})</a></p>
+				<p id="older"><a href="#" id="older-versions">Older versions</a></p>
+				<ul>
+			{% for tag in page.github_tags %}
+			{% if tag != page.github_tags.first %}<li><a href="http://github.com/camgill/{{ page.github }}/zipball/{{ tag }}">{{ tag }}</a></li>
+			{% endif %}	
+			{% endfor %}
+				</ul>
+			</aside>
+			{% endif %}			
+		{{ content }}
+		</section>
+		<section id="issues">
+			<p>You can report a <a href="http://github.com/{{ page.github }}/issues/new">issue</a>. As this is free software the response time can vary.<p>
+		</section>
+		{% if page.pledgie %}		
+		<section id="donations">
+			<h3>Donations</h3>
+			<p>Most of my software is free but I still need to eat and pay github for hosting.</p>
+			<p>If you use any software commercially please consider giving a donation.</p>
+			<p><a href="http://pledgie.com/campaigns/{{ page.pledgie }}">Make a donation via PayPal</a></p>
+			</form>
+		</section>
+		{% endif %}	
+	</article>

@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+	<head>
+	<title>{{site.name}} | {% if page.title %}{{ page.title }}{% endif %}</title>
+	{% if site.google_verify %}<meta name="google-site-verification" content="{{ site.google_verify }}" />{% endif %}
+	{% if page.meta_keywords %}<meta name="keywords" content="{{ page.meta_keywords }}" />{% endif %}
+	{% if page.meta_description %}<meta name="description" content="{{ page.meta_description }}" />{% endif %}
+	<link rel="stylesheet" href="/css/style.css" type="text/css" media="screen" />
+</head>
+<body>
+	<header>
+			<h1>{{ site.name }}</h1>
+			<h3>{{site.tagline}}</h3>
+	</header>
+		<nav>
+			<ul>
+				<li><a href="/">Home</a></li>
+				<li><a href="/about/">About</a></li>
+				<li><a href="/contact/">Contact</a></li>
+			</ul>
+		</nav>
+	<article>

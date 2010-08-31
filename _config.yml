@@ -1,0 +1,16 @@
+markdown:    maruku
+permalink:   /:categories/:title
+name: Jekyll Template
+tagline: Your Site Tagline
+
+# JS
+use_js: false # Are we using JS in this site
+
+# Google
+google_verify: #dnYnT5RRhgkeotm8DwbyVV1rx6usfX6TMAk7jY4Uy4c # Key for Google web master tools
+google_ana: #UA-12787162-1 # Just enter the Google Analytics Key to activate the Google Analytics code for this page
+
+#wufoo Forms
+use_wufoo: false # Set to false to dissable
+user_name: camgill # User name
+form_hash: s7x3w7 # form Hash
